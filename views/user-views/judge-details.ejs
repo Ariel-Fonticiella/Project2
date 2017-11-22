@@ -1,0 +1,42 @@
+<h2> Judge Details </h2>
+
+<h3> <%= judgeDetails.name %> </h3>
+
+<p> Circuit: $<%= judgeDetails.price %> </p>
+
+<p> <%= judgeDetails.description %> </p>
+
+<img src="<%= judgeDetails.imageUrl %>" />
+
+<p> Added on <%= judgeDetails.dateAdded %> </p>
+
+
+<a href="/judges/<%= judgeDetails._id %>/edit">
+  Edit This Product
+</a>
+
+<a href="/judges/<%= judgeDetails._id %>/delete">
+  Delete This Product (GET version)
+</a>
+
+<form method="post" action="/judges/<%= judgeDetails._id %>/delete">
+  <button> Delete This Product (POST version) </button>
+</form>
+
+<hr />
+
+<h3> Reviews </h3>
+
+<a href="/judges/<%= judgeDetails._id %>/reviews/new">
+  Write a Review
+</a>
+
+<ul>
+  <% listOfReviews.forEach((oneReview) => { %>
+    <li>
+      <h4> <%= oneReview.stars %> out of 5</h4>
+      <p> <%= oneReview.content %> </p>
+      <p> by <%= oneReview.authorName %> (<%= oneReview.authorEmail %>) </p>
+    </li>
+  <% }) %>
+</ul>

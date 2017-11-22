@@ -64,6 +64,9 @@ app.use(myForumRouter);
 
 const myDocumentsRouter = require("./routes/documents-router");
 app.use(myDocumentsRouter);
+
+const myJudgeRouter = require("./routes/judge-router");
+app.use(myJudgeRouter);
 // END ROUTES-------------------------------------------------------------------
 
 

@@ -1,0 +1,39 @@
+<h2> Judge List </h2>
+
+<a href="/judges/new"> Add a New Judge </a>
+
+<ul>
+  <% listOfJudges.forEach((oneJudge) => { %>
+    <li>
+      <h3> <%= oneJudge.name %> </h3>
+      <p> $<%= oneJudge.circuit %> </p>
+      <img src="<%= ooneJudge.imageUrl %>" />
+      <ul>
+        <li>
+          <!-- <a href="/judges/details?judgeId=<%= oneJudge._id %>"> -->
+          <a href="/judges/<%= oneJudge._id %>">
+            View Judge Details
+          </a>
+        </li>
+
+        <li>
+          <a href="/judges/<%= oneJudge._id %>/edit">
+            Edit
+          </a>
+        </li>
+
+        <li>
+          <a href="/judges/<%= oneJudge._id %>/delete">
+            Delete (GET)
+          </a>
+        </li>
+
+        <li>
+          <form method="post" aciton="/judges/<%= oneJudge._id %>/delete">
+            <button> Delete (POST) </button>
+          </form>
+        </li>
+      </ul>
+    </li>
+  <% }) %>
+</ul>

@@ -16,18 +16,31 @@
             <ul>
               <li> <a href="/"> Home </a> </li>
               <li> <a href="/profile"> Profile </a> </li>
+              <li> <a href="/judges"> Judges </a> </li>
               <li> <a href="/forum"> Forum </a> </li>
               <li> <a href="/documents"> Documents </a> </li>
               <li> <a href="/logout"> Log Out </a> </li>
-            </ul>
 
+              <form method="get" action="/search">
+                <button> Search </button>
+                <label for="search-term-input"></label></label>
+                <input id="search-term-input" type="search" name="userSearch"
+                      placeholder="e.g. Jeske" />
+              </form>
+
+            </ul>
           <% } %>
 
         </div> <!-- flex-container -->
     </nav>
+
   </header>
 
     <%- body %>
+
+  <footer>
+    Made by Ariel Fonticiella
+  </footer>
 
   </body>
 </html>
