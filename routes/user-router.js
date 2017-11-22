@@ -78,7 +78,7 @@ router.post("/process-signup", (req, res, next) => {
 router.get("/login", (req, res, next) => {
   // redirect to home if you are already logged in
   if (req.user) {
-      res.redirect("/");
+      res.redirect("/user-views/forum-page");
 
       // early return to stop the function since there's an error
       // prevent the rest of the code from running.
@@ -89,20 +89,20 @@ router.get("/login", (req, res, next) => {
 
 //STEP #2: process the log in form
 router.post("/process-login", (req, res, next) => {
-    // find a user documetn in the database with that email
-    UserModel.findOne({ email: req.body.loginEmail })
+    // find a user documetn in the database with that UserName
+    UserModel.findOne({ userName: req.body.loginUserName })
       .then((userFromDb) => {
           // if we didn't find a user
           if (userFromDb === null) {
-              //disply the form again because the email is wrong
-              res.locals.errorMessage = "Incorrect Email.";
+              //disply the form again because the UserName is wrong
+              res.locals.errorMessage = "No Such Username";
               res.render("user-views/login-page");
 
               // early return to stop the function since there's an error
               // prevent the rest of the code from running.
               return;
           }
-          // if email is correct now we check the password
+          // if UserName is correct now we check the password
           const isPasswordGood =
             bcrypt.compareSync(req.body.loginPassword, userFromDb.encryptedPassword);
 
@@ -125,8 +125,8 @@ router.post("/process-login", (req, res, next) => {
                 next(err);
             }
             else {
-                // if it worked redirect to the home page
-                res.redirect("/");
+                // if it worked redirect to the forum page
+                res.redirect("user-views/forum-page");
             }
           }); // req.login()
       }) // then()
@@ -142,44 +142,6 @@ router.get("/logout", (req, res, next) => {
 
     res.redirect("/");
 });
-
-
-// // Facebook login routes
-// //---------------------------------------------------------------------
-// // Link to "/facebook/login" to initiate the login process
-// router.get("/facebook/login",
-//   passport.authenticate("facebook"));
-//                                         //              |
-//                                         // This name comes from the Strategy
-//
-// // Facebook will redirect here after login is successful
-// router.get("/facebook/success",     // no normal callback here
-//   passport.authenticate("facebook", {
-//       successRedirect: "/",
-//       failureRedirect: "/login"
-//   })
-// );
-//
-// // Google login routes
-// //---------------------------------------------------------------------
-//
-// // Link to "/google/login" to initiate the login process
-// router.get("/google/login",
-//   passport.authenticate("google", {
-//     scope: [
-//       "https://www.googleapis.com/auth/plus.login",
-//       "https://www.googleapis.com/auth/plus.profile.emails.read"
-//     ]
-//   })
-// );
-//
-// // Google will redirect here after login is successful
-// router.get("/google/success",     // no normal callback here
-//   passport.authenticate("google", {
-//       successRedirect: "/",
-//       failureRedirect: "/login"
-//   })
-// );
 
 
 module.exports = router;

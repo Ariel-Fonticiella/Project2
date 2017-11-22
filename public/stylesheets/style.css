@@ -64,6 +64,7 @@ nav li {
 }
 
 .image {
+  height: 635px;
   min-height: 500px;
   background-image: url("../images/hero.jpg");
   background-repeat: no-repeat;
@@ -83,7 +84,6 @@ nav li {
   right: 0;
   left: 0;
   bottom: 0;
-  /*background: rgba(0,0,0,0.7);*/
 }
 
 .lettuce-wrap {
@@ -91,7 +91,6 @@ nav li {
   display: flex;
   flex-direction: column;
 }
-
 
 .btn-wrap {
   display: flex;
@@ -158,4 +157,96 @@ nav li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.down {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(0,0,0,0.37);
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -22px;
+}
+
+.down i {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/down-arrow.png) no-repeat;
+  background-position: center center;
+}
+
+/* Flex Box Unit */
+
+.about-wrap{
+  margin: 0 auto;
+  background-color: #EDF0F1;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.rows-wrap {
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.row1, .row2 {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin-bottom: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.card-container {
+	margin-top: 60px;
+	width: 500px;
+	height: auto;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.card-container {
+	background-color: #fff;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: opacity .15s linear;
+}
+
+h3.card-name{
+	background-color: #95a5a6;
+	color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .5px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  height: 58px;
+  line-height: 58px;
+  padding: 0 30px;
+}
+
+.content-wrapper {
+	padding: 0 30px;
+	justify-content: space-evenly;
+}
+
+.card-content {
+	padding: 15px 15px 15px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Global Classes */
+
+.adjust-1 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 70px;
 }
