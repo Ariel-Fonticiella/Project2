@@ -78,7 +78,7 @@ router.post("/process-signup", (req, res, next) => {
 router.get("/login", (req, res, next) => {
   // redirect to home if you are already logged in
   if (req.user) {
-      res.redirect("/user-views/forum-page");
+      res.redirect("/");
 
       // early return to stop the function since there's an error
       // prevent the rest of the code from running.
@@ -126,7 +126,7 @@ router.post("/process-login", (req, res, next) => {
             }
             else {
                 // if it worked redirect to the forum page
-                res.redirect("user-views/forum-page");
+                res.redirect("/forum");
             }
           }); // req.login()
       }) // then()

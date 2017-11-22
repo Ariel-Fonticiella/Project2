@@ -49,9 +49,9 @@ span {
   background-color: #D7DADB;
 }
 
-.flex-container {
+.flex-container-nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 nav li {
@@ -241,6 +241,13 @@ h3.card-name{
 	padding: 15px 15px 15px 0;
 	display: flex;
 	flex-direction: column;
+}
+
+/* Forum Page */
+
+.forum-wrap {
+  margin: 0 auto;
+  width: 98%;
 }
 
 /* Global Classes */

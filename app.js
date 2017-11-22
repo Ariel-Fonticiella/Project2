@@ -58,6 +58,12 @@ app.use('/', index);
 
 const myUserRouter = require("./routes/user-router");
 app.use(myUserRouter);
+
+const myForumRouter = require("./routes/forum-router");
+app.use(myForumRouter);
+
+const myDocumentsRouter = require("./routes/documents-router");
+app.use(myDocumentsRouter);
 // END ROUTES-------------------------------------------------------------------
 
 
