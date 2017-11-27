@@ -16,7 +16,8 @@ router.get("/search", (req, res, next) => {
     //                                  /search?userSearch=battery
 
     JudgeModel // find judges whose "name" matches the search term
-      .find({ name: searchRegex})
+      .find({ name: searchRegex},
+            { user_id: req.user._id})
       .limit(20)
       .exec()
       .then((searchResults) => {
@@ -34,7 +35,7 @@ router.get("/search", (req, res, next) => {
 
 router.get("/judges", (req, res, next) => {
     JudgeModel
-      .find()
+      .find({user_id: req.user._id })
       .limit(25)
       .sort({ dateAdded: -1 })
       .exec()
