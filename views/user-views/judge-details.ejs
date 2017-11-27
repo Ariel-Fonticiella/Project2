@@ -2,7 +2,7 @@
 
 <h3> <%= judgeDetails.name %> </h3>
 
-<p> Circuit: $<%= judgeDetails.price %> </p>
+<p> Circuit:<%= judgeDetails.price %> </p>
 
 <p> <%= judgeDetails.description %> </p>
 
@@ -12,16 +12,14 @@
 
 
 <a href="/judges/<%= judgeDetails._id %>/edit">
-  Edit This Product
+  Edit This Judge
 </a>
+
+<br />
 
 <a href="/judges/<%= judgeDetails._id %>/delete">
-  Delete This Product (GET version)
+  Delete This Judge
 </a>
-
-<form method="post" action="/judges/<%= judgeDetails._id %>/delete">
-  <button> Delete This Product (POST version) </button>
-</form>
 
 <hr />
 
@@ -36,7 +34,7 @@
     <li>
       <h4> <%= oneReview.stars %> out of 5</h4>
       <p> <%= oneReview.content %> </p>
-      <p> by <%= oneReview.authorName %> (<%= oneReview.authorEmail %>) </p>
+      <p> by <%= oneReview.authorName %> </p>
     </li>
   <% }) %>
 </ul>

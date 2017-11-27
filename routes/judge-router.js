@@ -1,7 +1,7 @@
 const express = require("express");
 
 const JudgeModel = require("../models/judge-model");
-const UserModel = require("../models/user-model");
+const ReviewModel = require("../models/review-model");
 
 
 const router = express.Router();

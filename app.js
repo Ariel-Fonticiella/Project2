@@ -21,7 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // default value for title local
-app.locals.title = "Latent Judgment";
+app.locals.title = "counterACT";
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -59,14 +59,17 @@ app.use('/', index);
 const myUserRouter = require("./routes/user-router");
 app.use(myUserRouter);
 
-const myForumRouter = require("./routes/forum-router");
-app.use(myForumRouter);
-
 const myDocumentsRouter = require("./routes/documents-router");
 app.use(myDocumentsRouter);
 
+const myForumRouter = require("./routes/forum-router");
+app.use(myForumRouter);
+
 const myJudgeRouter = require("./routes/judge-router");
 app.use(myJudgeRouter);
+
+const myReviewRouter = require("./routes/review-router");
+app.use(myReviewRouter);
 // END ROUTES-------------------------------------------------------------------
 
 

@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title><%= title %></title>
+    <script src="https://use.fontawesome.com/7ad418d947.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/discover.css">
     <link rel="stylesheet" href="/stylesheets/form.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
@@ -14,7 +15,6 @@
         <div class="flex-container-nav">
           <% if (currentUser) { %>
             <ul>
-              <li> <a href="/"> Home </a> </li>
               <li> <a href="/profile"> Profile </a> </li>
               <li> <a href="/judges"> Judges </a> </li>
               <li> <a href="/forum"> Forum </a> </li>
@@ -39,7 +39,34 @@
     <%- body %>
 
   <footer>
-    Made by Ariel Fonticiella
+    <div class=btm-wrap>
+      <div class="btm-top flex-container">
+        <strong class="h_counterAct">
+          <p class="counterAct">counterACT</p>
+        </strong>
+      </div>
+
+      <div class="btm-btm flex-container">
+        <div class="btm-list-left">
+          <ul>
+            <li> About </li>
+            <li> FAQs </li>
+            <li> Blog </li>
+          </ul>
+        </div>
+
+        <div class="btm-list-right">
+          <ul>
+            <li> Privacy </li>
+            <li> Careers </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <div class="madeBy flex-container">
+        <small> Made by Ariel Fonticiella </small>
+      </div>
+
   </footer>
 
   </body>

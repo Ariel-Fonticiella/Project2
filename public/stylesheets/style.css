@@ -22,9 +22,14 @@ a {
   border-radius: 10px;
   width: 36%;
   margin-left: 32%;
+  margin-bottom: 40px;
   background-color: #D7DADB;
   display: flex;
   box-shadow: 10px 10px 5px #888888;
+}
+
+.textarea {
+  width: 380px;
 }
 
 .name {
@@ -64,7 +69,7 @@ nav li {
 }
 
 .image {
-  height: 635px;
+  height: 645px;
   min-height: 500px;
   background-image: url("../images/hero.jpg");
   background-repeat: no-repeat;
@@ -165,7 +170,7 @@ nav li {
   height: 44px;
   background-color: rgba(0,0,0,0.37);
   position: absolute;
-  bottom: -4px;
+  bottom: 15px;
   left: 50%;
   margin-left: -22px;
 }
@@ -184,10 +189,6 @@ nav li {
   margin: 0 auto;
   background-color: #EDF0F1;
   width: 100%;
-}
-
-.flex-container {
-  display: flex;
 }
 
 .rows-wrap {
@@ -227,17 +228,23 @@ h3.card-name{
   letter-spacing: .5px;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  height: 58px;
-  line-height: 58px;
+  height: 25px;
+  line-height: 25px;
   padding: 0 30px;
 }
 
 .content-wrapper {
 	padding: 0 30px;
-	justify-content: space-evenly;
 }
 
 .card-content {
+	padding: 15px 15px 15px 0;
+	display: flex;
+	flex-direction: column;
+  width: 100%;
+}
+
+.card-content-left {
 	padding: 15px 15px 15px 0;
 	display: flex;
 	flex-direction: column;
@@ -250,7 +257,64 @@ h3.card-name{
   width: 98%;
 }
 
+/* Footer */
+
+footer {
+  position: relative;
+  background-color: #222;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.btm-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+footer .btm-top{
+  position: relative;
+  background-color: #222;
+  border-bottom: 1px solid #fff;
+  height: 100px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.h_counterAct {
+  display: block;
+  width: 56px;
+  height: 20px;
+  background-size: 250px 250px;
+  background-position: 0 -45px;
+  box-sizing: border-box;
+}
+
+.counterAct {
+  width: 100%;
+  font-size: 15px;
+  line-height: 65px;
+  padding-left: 25px;
+}
+
+.btm-btm {
+  margin-top: 65px;
+}
+
+.madeBy {
+  margin-top: 43px;
+  padding: 0 20px 10px 0;
+  justify-content: flex-end;
+}
+
 /* Global Classes */
+
+.flex-container {
+  display: flex;
+}
 
 .adjust-1 {
   width: 90%;

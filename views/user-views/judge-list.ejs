@@ -6,8 +6,8 @@
   <% listOfJudges.forEach((oneJudge) => { %>
     <li>
       <h3> <%= oneJudge.name %> </h3>
-      <p> $<%= oneJudge.circuit %> </p>
-      <img src="<%= ooneJudge.imageUrl %>" />
+      <p> <%= oneJudge.circuit %> Circuit </p>
+      <img src="<%= oneJudge.imageUrl %>" />
       <ul>
         <li>
           <!-- <a href="/judges/details?judgeId=<%= oneJudge._id %>"> -->
@@ -24,14 +24,8 @@
 
         <li>
           <a href="/judges/<%= oneJudge._id %>/delete">
-            Delete (GET)
+            Delete
           </a>
-        </li>
-
-        <li>
-          <form method="post" aciton="/judges/<%= oneJudge._id %>/delete">
-            <button> Delete (POST) </button>
-          </form>
         </li>
       </ul>
     </li>

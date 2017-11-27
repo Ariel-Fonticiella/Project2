@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = Promise;
 
-mongoose.connect("mongodb://localhost/judged", { useMongoClient: true })
+mongoose.connect("mongodb://localhost/counterAct", { useMongoClient: true })
   .then(() => {
     console.log("Mongoose is connected!");
   })
