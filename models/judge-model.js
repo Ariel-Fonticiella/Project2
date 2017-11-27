@@ -28,7 +28,7 @@ const judgeSchema = new Schema({
     // description of the judge
     description: {
       type: String,
-      maxlength: [300, "Sorry, your description is too long."]
+      maxlength: [900, "Sorry, your description is too long."]
     },
 
     user_id: {
