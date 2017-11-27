@@ -147,7 +147,7 @@ router.get("/judges/:judgeId/edit", (req, res, next) => {
       .then((judgeFromDb) => {
           // create a local variable for the view to access the DB result
           // (this is so we can pre-fill the form)
-          res.locals.judgesDetails = judgeFromDb;
+          res.locals.judgeDetails = judgeFromDb;
 
           res.render("user-views/judge-edit");
       })

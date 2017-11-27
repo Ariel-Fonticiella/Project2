@@ -29,4 +29,8 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
+# Ignore our .DS_Store file 
 .DS_Store
+
+# Ignore our environment variables file
+.env

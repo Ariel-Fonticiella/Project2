@@ -8,6 +8,10 @@ const layouts      = require('express-ejs-layouts');
 const session      = require("express-session");
 const passport     = require("passport");
 
+// Load environment variables from the ".env" file
+// (put this before the setup files since this defines env variables)
+require("dotenv").config();
+
 // run the code that sets up the Mongoose database connection
 require("./config/mongoose-setup");
 
