@@ -12,7 +12,6 @@ body {
 }
 
 a {
-  color: #43a3e6;
   text-decoration: none;
   font-weight: 900;
 }
@@ -296,8 +295,9 @@ strong {
 .counterAct {
   width: 100%;
   font-size: 15px;
-  line-height: 65px;
+  line-height: 100px;
   padding-left: 25px;
+  color: #fff;
 }
 
 .btm-btm {

@@ -125,8 +125,8 @@ router.post("/process-login", (req, res, next) => {
                 next(err);
             }
             else {
-                // if it worked redirect to the forum page
-                res.redirect("/forum");
+                // if it worked redirect to the profile page
+                res.redirect("/profile");
             }
           }); // req.login()
       }) // then()

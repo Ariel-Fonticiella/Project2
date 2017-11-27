@@ -1,0 +1,18 @@
+.profile-wrap {
+  margin: 0 auto;
+  border: 1px solid black;
+  height: 200px;
+}
+
+.profile-container {
+  flex-direction: column;
+}
+
+.profile-top {
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.profile-bottom {
+  border: 1px solid black;
+}

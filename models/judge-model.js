@@ -31,6 +31,11 @@ const judgeSchema = new Schema({
       maxlength: [300, "Sorry, your description is too long."]
     },
 
+    user_id: {
+      type: Schema.Types.ObjectId,
+      ref: "User" // Has to be name of collection in user-model
+    },
+
     // when the judge was added to the system
     dateAdded: { type: Date }
 });

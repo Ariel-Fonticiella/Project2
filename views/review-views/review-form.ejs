@@ -4,8 +4,14 @@
 
 <img src="<%= judgeDetails.imageUrl %>" />
 
+<form method="post" action="/judges/<%= judgeDetails._id %>/reviews">
+  <label for="review-stars"> Rating </label>
+  <input  id="review-stars" type="number" placeholder="e.g. 5"
+      name="reviewStars" />
+  <br />
 
-  <label for="disqus_thread"><div class="forum-wrap">
+  <label for="disqus_thread">
+    <div class="forum-wrap">
 
     <div id="disqus_thread"></div>
     <script>
@@ -16,7 +22,7 @@
 
     var disqus_config = function () {
     // this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = forum-page; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.identifier = review-form; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE

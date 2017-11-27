@@ -1,1 +1,37 @@
-<h1>Welcome <%= userName %> </h1> 
+<% if (currentUser) { %>
+  <p> Hello, <%= currentUser.userName %>! </p>
+<% } %>
+
+<p>Welcome to <%= title %></p>
+
+  <div class="profile-wrap">
+
+    <div class="profile-container flex-container">
+      <div class="profile-top">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum hendrerit imperdiet. Praesent luctus, dolor ut molestie finibus, turpis leo lacinia felis, id pulvinar nulla lacus semper mauris. Aliquam gravida imperdiet sapien sit amet vehicula.
+      </div>
+      <br />
+      <div class="profile-bottom">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum hendrerit imperdiet.
+        </p>
+      </div>
+
+    </div> <!-- flex-container -->
+  </div> <!-- profile-wrap -->
+
+
+<% if (currentUser) { %>
+
+  <p>
+    Did you know you have had your account since
+    <%= currentUser.createdAt %>
+  </p>
+
+<% } else { %>
+
+    <p>
+      You should <a href="/signup">sign up TODAY </a>!
+    </p>
+
+<% } %>

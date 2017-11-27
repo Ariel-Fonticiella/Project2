@@ -65,6 +65,7 @@ router.post("/judges", (req, res, next) => {
         circuit:     req.body.judgeCircuit,
         imageUrl:    req.body.judgeImage,
         description: req.body.judgeDescription,
+        user_id:     req.user._id,
         dateAdded:   new Date()  // |
     }); // |                     // |
         // fields from         names of the

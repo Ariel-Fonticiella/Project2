@@ -62,14 +62,17 @@ app.use(myUserRouter);
 const myDocumentsRouter = require("./routes/documents-router");
 app.use(myDocumentsRouter);
 
-const myForumRouter = require("./routes/forum-router");
-app.use(myForumRouter);
+// const myForumRouter = require("./routes/forum-router");
+// app.use(myForumRouter);
 
 const myJudgeRouter = require("./routes/judge-router");
 app.use(myJudgeRouter);
 
 const myReviewRouter = require("./routes/review-router");
 app.use(myReviewRouter);
+
+const myProfileRouter = require("./routes/profile-router");
+app.use(myProfileRouter);
 // END ROUTES-------------------------------------------------------------------
 
 
