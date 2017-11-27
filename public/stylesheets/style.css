@@ -304,6 +304,12 @@ strong {
   margin-top: 65px;
 }
 
+.btm-list-left ul {
+  line-height: 65px;
+  text-decoration: none;
+  list-style: none;
+}
+
 .madeBy {
   margin-top: 43px;
   padding: 0 20px 10px 0;
