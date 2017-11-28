@@ -1,1 +1,30 @@
-<h2> Documents </h2>
+<h2> Add a Document </h2>
+
+<% if (typeof errorMessage !== "undefined") { %>
+   <p class="error-message"> <%= errorMessage %> </p>
+ <% } %>
+
+ <div class="box">
+
+ <form id="form" method="post" action="/documents" enctype="multipart/form-data">
+   <label for="doc-name-input"> Document Name </label>
+   <input id="doc-name-input" type="text" placeholder="e.g. JQC Complaint Form"
+         name="docName" />
+   <br />
+   <br />
+
+   <label for="doc-photo-input"> Document Img URL </label>
+   <input id="doc-photo-input" type="text" placeholder="e.g. http://example.com/beach.gif"
+         name="docPhoto" />
+   <br />
+   <br />
+
+   <label    for="doc-description-input"> Description </label>
+   <textarea class="room" id="doc-description-input" placeholder="e.g. Complaint Form"
+           name="docDescription"></textarea>
+   <br />
+   <br />
+
+   <button> Save This Document </button>
+ </form>
+ </div>

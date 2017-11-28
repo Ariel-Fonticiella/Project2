@@ -19,7 +19,7 @@
 
           <% if (currentUser) { %>
 
-            <a href="/" class="counterAct"> counterACT </a>
+            <a href="/" class="counterAct1"> counterACT </a>
 
               <ul class="flex-container nav-wrap">
                 <li class="nav-item"> <a href="/profile">    Profile    </a> </li>
@@ -40,23 +40,29 @@
       <div class="btm-top flex-container">
         <a href="/" class="counterAct"> counterACT </a>
         <div class="flex-container search-wrap">
-          <form method="get" action="/search">
-               <div class="input-wrapper">
-                 <input id="search-term-input" aria-invalid="false" name="userSearch" pattern="^[a-zA-Z0-9_]{1,15}$" type="text" class="form__field__input"></div>
+          <section id="search">
+            <label for="search-input">
+              <i class="fa fa-search" aria-hidden="true">
+              </i>
+              <span class="sr-only"> Search </span>
             </label>
-
-            <%# <label for="search-term-input"></label></label>
-            <input id="search-term-input" type="search" name="userSearch"
-                  placeholder="e.g. Jeske" />%>
-          </form>
+            <input id="search-input" class="form-control input-lg" placeholder=" Search " autocomplete="off" tabindex="1" />
+          </section>
         </div> <!-- search-wrap -->
       </div> <!-- btm-top -->
     </div> <!-- border-bottom -->
 
-    <div class="madeBy flex-container">
-      <small> Made by Ariel Fonticiella </small>
-    </div>
+    <div class="border-bottom">
+      <div class="btm-btm flex-container">
+        <q>
+          You have to start somewhere, you have to start somehow. <br />
+          What better place than here, what better time than now?
+        </q>
+      </div> <!-- btm-btm -->
 
+      <div class="madeBy flex-container">
+        <small> Made by Ariel Fonticiella </small>
+      </div>
   </footer>
 
   </body>

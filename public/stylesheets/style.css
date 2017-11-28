@@ -9,7 +9,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: #333;
-  background-color: #CCCFCA;
+  background-color: #F4F4F4;
   width: 100%;
   margin: 0 auto;
 }
@@ -46,9 +46,8 @@ h2 {
 }
 
 nav {
-    background-color: #292929;
-    align-items: baseline;
-    margin: 0 auto;
+  background-color: #292929;
+  padding: 0 10px 0px 10px;
 }
 
 .container-nav {
@@ -159,6 +158,22 @@ nav li {
   color: #fff;
 }
 
+.btn-filled1 {
+  background-color: #222;
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-filled1:hover {
+  background: #fff;
+  color: #333;
+  border-color: #fff;
+}
+
+.judge {
+  justify-content: center;
+}
+
 .btn {
   -moz-transition: all 300ms ease;
   transition: all 300ms ease;
@@ -231,10 +246,12 @@ nav li {
 }
 
 .card-container {
-	background-color: #fff;
+  background-color: #fff;
+  flex-direction: column;
   margin-bottom: 20px;
+  padding-top: 30px;
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-radius: 50px;
   transition: opacity .15s linear;
 }
 
@@ -257,13 +274,14 @@ h3.card-name{
 
 }
 .card-name{
-padding-left: 150px;
-height: 190px;
+  margin: 0 auto;
+  height: 190px;
 
 }
 
 .content-wrapper {
 	padding: 0 30px;
+  flex-direction: column;
 }
 
 .card-content {
@@ -290,15 +308,13 @@ height: 190px;
 
 footer {
   position: relative;
-  background-color: #222;
-  color: #fff;
+  background-color: #292929;
   font-size: 12px;
   font-family: 'Titillium Web', sans-serif;
 }
 
 
 footer .btm-top{
-  background-color: #222;
   align-items: baseline;
   justify-content: space-between;
   width: 90%;
@@ -307,6 +323,10 @@ footer .btm-top{
 
 .border-bottom {
   border-bottom: 1px solid #fff;
+}
+
+.counterAct1 {
+  font-size: 27px;
 }
 
 .counterAct {
@@ -318,6 +338,17 @@ footer .btm-top{
 
 .btm-btm {
   margin-top: 65px;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+}
+
+small {
+  color: #fff;
+}
+
+.btm-reg {
+  color: blue;
 }
 
 .nav-item {

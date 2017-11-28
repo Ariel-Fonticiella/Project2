@@ -1,7 +1,9 @@
 .profile-wrap {
   margin: 0 auto;
+  margin-left: 10px;
+  margin-right: 10px;
   border: 1px solid black;
-  height: 200px;
+  padding-bottom: 40px;
 }
 
 .profile-container {
@@ -11,8 +13,52 @@
 .profile-top {
   border: 1px solid black;
   margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .profile-bottom {
   border: 1px solid black;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.profileBtn {
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.profileBtn:hover{
+  color: #333;
+}
+
+.judge-btn {
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 30px;
+}
+
+.judge-btn a {
+  color: #222;
+  padding-bottom: 10px;
+}
+
+.judge-btn a::before {
+  font-family: FontAwesome;
+  content: "\f05a";
+  margin-right: 5px;
+}
+
+.createBtn {
+  color: #222;
+}
+
+.profileWrap {
+  justify-content: center;
+  flex-direction: row;
 }

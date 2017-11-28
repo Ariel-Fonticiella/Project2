@@ -11,6 +11,11 @@ const userSchema = new Schema(
       required: [true, "Give us your User Name."]
     },
 
+    avatar: {
+      type: String,
+      default: "/images/default-avatar.gif"
+    },
+
     encryptedPassword: {
       type: String,
     },
