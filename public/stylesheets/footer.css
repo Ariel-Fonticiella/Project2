@@ -1,0 +1,27 @@
+form input[type=text], form textarea {
+    color: #333;
+}
+
+.form__field__input, input[type=text] {
+    background: #fff;
+    border: 1px solid #bbb;
+    transition: all .3s ease-in-out;
+    background-position: right 1.35em center;
+    background-size: .25em .25em;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+    border-radius: 11px;
+    padding: .75em 2em .85em 1em;
+    width: 100%;
+    outline: 0;
+}
+
+.form__field__input:active, input[type=text]:active {
+  box-shadow: 0 4px 15px #bebebe;
+  border-color: #dadada;
+  outline: 0!important;
+}
+
+.form__field .input-wrapper {
+  position: relative;
+}

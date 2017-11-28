@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/profile.css">
     <link rel="stylesheet" href="/stylesheets/form.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
@@ -14,60 +15,47 @@
   <body>
   <header>
     <nav>
-        <div class="flex-container-nav">
+      <div class="flex-container container-nav">
+
           <% if (currentUser) { %>
-            <ul>
-              <li> <a href="/profile"> Profile </a> </li>
-              <li> <a href="/judges"> Judges </a> </li>
-              <li> <a href="/documents"> Documents </a> </li>
-              <li> <a href="/logout"> Log Out </a> </li>
 
-              <form method="get" action="/search">
-                <button> Search </button>
-                <label for="search-term-input"></label></label>
-                <input id="search-term-input" type="search" name="userSearch"
-                      placeholder="e.g. Jeske" />
-              </form>
+            <a href="/" class="counterAct"> counterACT </a>
 
-            </ul>
+              <ul class="flex-container nav-wrap">
+                <li class="nav-item"> <a href="/profile">    Profile    </a> </li>
+                <li class="nav-item"> <a href="/judges">     Judges     </a> </li>
+                <li class="nav-item"> <a href="/documents">  Documents  </a> </li>
+                <li class="nav-item"> <a href="/logout">     Log Out    </a> </li>
+              </ul>
+
           <% } %>
-
-        </div> <!-- flex-container -->
+      </div> <!-- container-nav -->
     </nav>
-
   </header>
 
     <%- body %>
 
   <footer>
-    <div class=btm-wrap>
+    <div class="border-bottom">
       <div class="btm-top flex-container">
-        <strong class="h_counterAct">
-          <a href="/" class="counterAct"> counterACT </a>
-        </strong>
-      </div>
+        <a href="/" class="counterAct"> counterACT </a>
+        <div class="flex-container search-wrap">
+          <form method="get" action="/search">
+               <div class="input-wrapper">
+                 <input id="search-term-input" aria-invalid="false" name="userSearch" pattern="^[a-zA-Z0-9_]{1,15}$" type="text" class="form__field__input"></div>
+            </label>
 
-      <div class="btm-btm flex-container">
-        <div class="btm-list-left">
-          <ul>
-            <li> About </li>
-            <li> FAQs </li>
-            <li> Blog </li>
-          </ul>
-        </div>
+            <%# <label for="search-term-input"></label></label>
+            <input id="search-term-input" type="search" name="userSearch"
+                  placeholder="e.g. Jeske" />%>
+          </form>
+        </div> <!-- search-wrap -->
+      </div> <!-- btm-top -->
+    </div> <!-- border-bottom -->
 
-        <div class="btm-list-right">
-          <ul class="btm-list">
-            <li> Privacy </li>
-            <li> Careers </li>
-            <li> Contact Us </li>
-          </ul>
-        </div>
-      </div>
+    <div class="madeBy flex-container">
+      <small> Made by Ariel Fonticiella </small>
     </div>
-      <div class="madeBy flex-container">
-        <small> Made by Ariel Fonticiella </small>
-      </div>
 
   </footer>
 

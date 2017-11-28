@@ -4,30 +4,68 @@
 
 <ul>
   <% listOfJudges.forEach((oneJudge) => { %>
-    <li>
-      <h3> <%= oneJudge.name %> </h3>
-      <p> <%= oneJudge.circuit %> Circuit </p>
-      <img src="<%= oneJudge.imageUrl %>" />
-      <ul>
-        <li>
-          <!-- <a href="/judges/details?judgeId=<%= oneJudge._id %>"> -->
-          <a href="/judges/<%= oneJudge._id %>">
-            View Judge Details
-          </a>
-        </li>
 
-        <li>
-          <a href="/judges/<%= oneJudge._id %>/edit">
-            Edit
-          </a>
-        </li>
+    <div class="flex-container rows-wrap">
 
-        <li>
-          <a href="/judges/<%= oneJudge._id %>/delete">
-            Delete
-          </a>
-        </li>
-      </ul>
-    </li>
-  <% }) %>
-</ul>
+      <div class="flex-container">
+
+    				<div class="card-container">
+    					<img src="<%= oneJudge.imageUrl %>" class="card-name" />
+    				  <div class="flex-container content-wrapper">
+
+      					<div class="card-content">
+                    <h3 class="about-p"> <%= oneJudge.name %> </h3>
+                  <p class="about-p">
+                    <p> Circuit: <%= oneJudge.circuit %> </p>
+                    <p> <%= oneJudge.description %> </p>
+                  </p>
+                </div><!-- Card Content -->
+
+                <div class"judge-btn">
+
+                  <a href="/judges/<%= oneJudge._id %>">
+                    View Judge Details
+                  </a>
+
+                  <a href="/judges/<%= oneJudge._id %>/edit">
+                    Edit This Judge
+                  </a>
+
+                  <br />
+
+                  <a href="/judges/<%= oneJudge._id %>/delete">
+                    Delete This Judge
+                  </a>
+                </div> <!-- judge-btn -->
+              </div><!-- Content Wrapper -->
+            </div><!-- Card Container -->
+
+
+
+//     <li>
+//       <h3> <%= oneJudge.name %> </h3>
+//       <p> <%= oneJudge.circuit %> Circuit </p>
+//       <img src="<%= oneJudge.imageUrl %>" />
+//       <ul>
+//         <li>
+//           <!-- <a href="/judges/details?judgeId=<%= oneJudge._id %>"> -->
+//           <a href="/judges/<%= oneJudge._id %>">
+//             View Judge Details
+//           </a>
+//         </li>
+//
+//         <li>
+//           <a href="/judges/<%= oneJudge._id %>/edit">
+//             Edit
+//           </a>
+//         </li>
+//
+//         <li>
+//           <a href="/judges/<%= oneJudge._id %>/delete">
+//             Delete
+//           </a>
+//         </li>
+//       </ul>
+//     </li>
+//   <% }) %>
+// </ul>
