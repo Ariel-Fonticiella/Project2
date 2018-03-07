@@ -1,12 +1,3 @@
-HackRiddle 2017 is a 24-hour hackathon at Embry-Riddle Aeronautical University in Daytona Beach, FL. HackRiddle 2017 took place the weekend of Saturday, November 11th to Sunday, November 12th.
-
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-
-
-
 # counterACT
 
 ** A platform to share information regarding what the “do’s and don’ts” of a particular judges courtroom are.**
