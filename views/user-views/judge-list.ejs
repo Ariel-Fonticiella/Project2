@@ -9,9 +9,8 @@
     <% listOfJudges.forEach((oneJudge) => { %>
     				<div class="flex-container card-container">
               <h3 class="about-p"> <%= oneJudge.name %> </h3>
-    					<img src="<%= oneJudge.imageUrl %>" class="card-name" />
     				  <div class="flex-container content-wrapper">
-
+                <img src="<%= oneJudge.imageUrl %>" class="card-name" />
       					<div class="card-content">
 
                   <p class="about-p">
@@ -37,5 +36,5 @@
             </div><!-- Content Wrapper -->
           </div><!-- Card Container -->
      <% }) %>
-    </div>
-  </div>
+   </div><!-- row1 -->
+ </div><!-- rows-wrap -->

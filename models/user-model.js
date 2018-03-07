@@ -13,7 +13,7 @@ const userSchema = new Schema(
 
     avatar: {
       type: String,
-      default: "/images/default-avatar.gif"
+      default: "/images/default-avatar.png"
     },
 
     encryptedPassword: {
