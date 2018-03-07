@@ -1,6 +1,6 @@
 # counterACT
 
-** A platform to share information regarding what the “do’s and don’ts” of a particular judges courtroom are.**
+A platform to share information regarding what the “do’s and don’ts” of a particular judges courtroom are.
 
 
 &nbsp;
