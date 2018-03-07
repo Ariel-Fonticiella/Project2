@@ -1,0 +1,46 @@
+<% if (currentUser) { %>
+  <p class="welcome">Welcome to your <b><%= title %></b> Profile </p>
+
+  <p> <b>Hello, <%= currentUser.userName %>!</b>
+    <br />
+    <b>Currently Logged in as: (<%= currentUser.email %>)</b>
+  </p>
+<% } %>
+
+  <div class="flex-container profile-wrap">
+
+    <div class="flex-container profile-container ">
+      <nav class="flex-container profileBtn">
+        <a href="/settings"> Settings </a>
+        <a href="/documents"> Documents </a>
+      </nav>
+      <div class="profile-top">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum hendrerit imperdiet. Praesent luctus, dolor ut molestie finibus, turpis leo lacinia felis, id pulvinar nulla lacus semper mauris. Aliquam gravida imperdiet sapien sit amet vehicula.
+        </p>
+      </div>
+      <br />
+      <div class="profile-bottom">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum hendrerit imperdiet.
+        </p>
+      </div>
+
+    </div> <!-- flex-container -->
+  </div> <!-- profile-wrap -->
+
+
+<% if (currentUser) { %>
+
+  <p>
+    Account active since:
+    <%= currentUser.createdAt %>
+  </p>
+
+<% } else { %>
+
+    <p>
+      You should <a href="/signup">sign up TODAY </a>!
+    </p>
+
+<% } %>

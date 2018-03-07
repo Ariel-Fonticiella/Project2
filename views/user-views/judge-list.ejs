@@ -1,0 +1,40 @@
+<h2> Judge List </h2>
+
+<div class="flex-container judge">
+  <a class="btn btn-primary btn-filled1" href="/judges/new"> Add a New Judge </a>
+</div>
+
+<div class="flex-container rows-wrap">
+  <div class="flex-container row1 ">
+    <% listOfJudges.forEach((oneJudge) => { %>
+    				<div class="flex-container card-container">
+              <h3 class="about-p"> <%= oneJudge.name %> </h3>
+    				  <div class="flex-container content-wrapper">
+                <img src="<%= oneJudge.imageUrl %>" class="card-name" />
+      					<div class="card-content">
+
+                  <p class="about-p">
+                      Circuit: <%= oneJudge.circuit %> <br />
+                      Description: <b><%= oneJudge.description %></b>
+                  </p>
+
+                  <div class="flex-container judge-btn">
+                    <a href="/judges/<%= oneJudge._id %>">
+                      View Judge Details
+                    </a>
+
+                    <a href="/judges/<%= oneJudge._id %>/edit">
+                      Edit This Judge
+                    </a>
+
+                    <a href="/judges/<%= oneJudge._id %>/delete">
+                      Delete This Judge
+                    </a>
+
+                </div> <!-- judge-btn -->
+              </div><!-- Card Content -->
+            </div><!-- Content Wrapper -->
+          </div><!-- Card Container -->
+     <% }) %>
+   </div><!-- row1 -->
+ </div><!-- rows-wrap -->
