@@ -1,33 +1,49 @@
 const mongoose = require("mongoose");
 
+
 const Schema = mongoose.Schema;
 
 
-const documentSchema = new Schema(
-  // 1st argument -> SCHEMA STRUCTURE
-  {
-      name: {
-        type: String,
-        required: [true, "Please give your document a name"]
-      },
-      photoUrl: {
-        type: String,
-      },
-      description: { type: String },
+// the schema defines the structure of documents in this collection
+const judgeSchema = new Schema({
+    // name of the judge
+    name: {
+      type: String,
+      required: [true, "Judge's name is required."]
+    },
 
-      owner: {
-        type: Schema.Types.ObjectId,
-      }
-  },
+    // circuit of the judge
+    circuit: {
+      type: Number,
+      required: [true, "Please indicate which Circuit Court your Judge is located in."],
+      min: [0, "Circuit can't be negative."]
+    },
 
-  // 2nd argument -> SETTINGS object
-  {
-      // automatically add "createdAt" and "updatedAt" Date fields
-      timestamps: true
-  }
-);
+    // URL of an image file to use in <img src="??">
+    imageUrl: {
+      type: String,
+      required: [true, "Please provide an image URL."]
+    },
 
-const DocumentModel = mongoose.model("Document", documentSchema);
+    // description of the judge
+    description: {
+      type: String,
+      maxlength: [900, "Sorry, your description is too long."]
+    },
+
+    user_id: {
+      type: Schema.Types.ObjectId,
+      ref: "User" // Has to be name of collection in user-model
+    },
+
+    // when the judge was added to the system
+    dateAdded: { type: Date }
+});
+
+// the model has the methods to make database queries
+const JudgeModel = mongoose.model("Judge", judgeSchema);
+              //                        |
+              // collection name is "judges"
 
 
-module.exports = DocumentModel;
+module.exports = JudgeModel;
