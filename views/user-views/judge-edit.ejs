@@ -5,40 +5,36 @@
   <ul class="error">
     <!-- we cant do a forEach loop because "validationErrors" is an object -->
     <% for (let field in validationErrors) { %>
-      <li> <%= validationErrors[field].message %> </li>
-    <% } %>
+      <li>
+        <%= validationErrors[field].message %>
+      </li>
+      <% } %>
   </ul>
-<% } %>
+  <% } %>
 
 
-<form method="post" action="/judges/<%= judgeDetails._id %>">
-  <label for="judge-name-input"> Judge Name </label>
-  <input  id="judge-name-input" type="text" placeholder="e.g. Paul Jeske"
-      name="judgeName" value="<%= judgeDetails.name %>" />
-  <br />
+    <form method="post" action="/judges/<%= judgeDetails._id %>">
+      <label for="judge-name-input"> Judge Name </label>
+      <input id="judge-name-input" type="text" placeholder="e.g. Paul Jeske" name="judgeName" value="<%= judgeDetails.name %>" />
+      <br />
 
-  <label for="judge-circuit-input"> Judge Circuit </label>
-  <input  id="judge-circuit-input" type="number" step="1"
-      placeholder="e.g. 13" name="judgeCircuit"
-      value="<%= judgeDetails.circuit %>" />
-  <br />
+      <label for="judge-circuit-input"> Judge Circuit </label>
+      <input id="judge-circuit-input" type="number" step="1" placeholder="e.g. 13" name="judgeCircuit" value="<%= judgeDetails.circuit %>" />
+      <br />
 
-  <label for="judge-image-input"> Image URL </label>
-  <input  id="judge-image-input" type="text"
-      placeholder="e.g. http://example.com/judge.jpg" name="judgeImage"
-      value="<%= judgeDetails.imageUrl %>" />
-  <br />
+      <label for="judge-image-input"> Image URL </label>
+      <input id="judge-image-input" type="text" placeholder="e.g. http://example.com/judge.jpg" name="judgeImage" value="<%= judgeDetails.imageUrl %>" />
+      <br />
 
-  <h3> Current Image </h3>
-  <img src="<%= judgeDetails.imageUrl %>" />
-  <br />
+      <h3> Current Image </h3>
+      <img src="<%= judgeDetails.imageUrl %>" />
+      <br />
 
-  <label   for="judge-description-input"> Judge Description </label>
-  <textarea id="judge-description-input" placeholder="e.g. Fair, unbiased, impartial."
-      name="judgeDescription"><%= judgeDetails.description %></textarea>
-                 <!--          ||                               ||
+      <label for="judge-description-input"> Judge Description </label>
+      <textarea id="judge-description-input" placeholder="e.g. Fair, unbiased, impartial." name="judgeDescription"><%= judgeDetails.description %></textarea>
+      <!--          ||                               ||
                       No extra spaces between the open and close of <textarea> -->
-  <br />
+      <br />
 
-  <button> Save Changes </button>
-</form>
+      <button> Save Changes </button>
+    </form>

@@ -1,46 +1,50 @@
 <% if (currentUser) { %>
-  <p class="welcome">Welcome to your <b><%= title %></b> Profile </p>
+  <p class="welcome"> "
+    <%= currentUser.userName %>'s Profile"</p>
+  <div class="flex-container">
+    <div class="avatarIcon">
+      <p class="flex-container avy">
+        <img class="avatar" src=<%=c urrentUser.avatar %> />
+        <b>Hello, <%= currentUser.userName %>!</b>
+      </p>
+    </div>
 
-  <p> <b>Hello, <%= currentUser.userName %>!</b>
-    <br />
-    <b>Currently Logged in as: (<%= currentUser.email %>)</b>
-  </p>
-<% } %>
+  </div>
+  <% } %>
 
-  <div class="flex-container profile-wrap">
+    <div class="flex-container profile-wrap">
 
-    <div class="flex-container profile-container ">
-      <nav class="flex-container profileBtn">
-        <a href="/settings"> Settings </a>
-        <a href="/documents"> Documents </a>
-      </nav>
-      <div class="profile-top">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum hendrerit imperdiet. Praesent luctus, dolor ut molestie finibus, turpis leo lacinia felis, id pulvinar nulla lacus semper mauris. Aliquam gravida imperdiet sapien sit amet vehicula.
-        </p>
+      <div class="flex-container profile-container ">
+        <nav class="flex-container profileBtn">
+          <a href="/settings"> <i class="fas fa-cog"></i> Settings </a>
+          <a href="/documents"> Documents </a>
+        </nav>
+        <div class="profile-top">
+          <h3 class="update"> UPDATE: You should know: </h3> <br />
+          <p class="update">
+            Please note that the Commission only has authority to investigate allegations of judicial misconduct or permanent disability by persons holding state judicial positions. The Commission has no jurisdiction over and does not consider complaints against
+            Federal Judges, magistrates, lawyers, police, court personnel, or State Attorneys. The Commission does not act as an appellate court and cannot review, reverse or modify a legal decision made by a judge in the course of a court proceeding.
+            For example, the Commission does not investigate claims that a judge wrongfully excluded evidence; imposed an improper sentence, awarded custody to the wrong party; incorrectly awarded alimony or child support; incorrectly resolved a legal
+            issue or believed perjured testimony.
+          </p>
+        </div>
+        <br />
       </div>
-      <br />
-      <div class="profile-bottom">
+      <!-- flex-container -->
+    </div>
+    <!-- profile-wrap -->
+
+    <% if (currentUser) { %>
+
+      <p>
+        Account active since:
+        <%= currentUser.createdAt %>
+      </p>
+
+      <% } else { %>
+
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum hendrerit imperdiet.
+          You should <a href="/signup">sign up TODAY </a>!
         </p>
-      </div>
 
-    </div> <!-- flex-container -->
-  </div> <!-- profile-wrap -->
-
-
-<% if (currentUser) { %>
-
-  <p>
-    Account active since:
-    <%= currentUser.createdAt %>
-  </p>
-
-<% } else { %>
-
-    <p>
-      You should <a href="/signup">sign up TODAY </a>!
-    </p>
-
-<% } %>
+        <% } %>

@@ -2,15 +2,18 @@
 
 <h3> <%= judgeDetails.name %> </h3>
 
-  <p> Circuit: <%= judgeDetails.circuit %> </p>
-  <p> Description: <%= judgeDetails.description %> </p>
+<p> Circuit:
+  <%= judgeDetails.circuit %>
+</p>
+<p> Description:
+  <%= judgeDetails.description %>
+</p>
 
 <img src="<%= judgeDetails.imageUrl %>" />
 
 <form method="post" action="/judges/<%= judgeDetails._id %>/reviews">
   <label for="review-stars"> Rating </label>
-  <input  id="review-stars" type="number" placeholder="e.g. 5"
-      name="reviewStars" />
+  <input id="review-stars" type="number" placeholder="e.g. 5" name="reviewStars" />
   <br />
   <button> Submit Rating </button>
 

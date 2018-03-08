@@ -1,12 +1,12 @@
-const express      = require('express');
-const path         = require('path');
-const favicon      = require('serve-favicon');
-const logger       = require('morgan');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
 const cookieParser = require('cookie-parser');
-const bodyParser   = require('body-parser');
-const layouts      = require('express-ejs-layouts');
-const session      = require("express-session");
-const passport     = require("passport");
+const bodyParser = require('body-parser');
+const layouts = require('express-ejs-layouts');
+const session = require("express-session");
+const passport = require("passport");
 
 // Load environment variables from the ".env" file
 // (put this before the setup files since this defines env variables)
@@ -31,7 +31,9 @@ app.locals.title = "counterACT";
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
@@ -47,13 +49,13 @@ app.use(passport.session());
 
 // define a custom middleware to define "currentUser" in all our views
 app.use((req, res, next) => {
-    // Passport defines "req.user" if the user is logged in
-    // ("req.user" is the result of deserialize)
-    res.locals.currentUser = req.user;
+  // Passport defines "req.user" if the user is logged in
+  // ("req.user" is the result of deserialize)
+  res.locals.currentUser = req.user;
 
-    // call "next()" to tell Express that we've finished
-    // (otherwise your browser will hang)
-    next();
+  // call "next()" to tell Express that we've finished
+  // (otherwise your browser will hang)
+  next();
 });
 
 // ROUTES-----------------------------------------------------------------------

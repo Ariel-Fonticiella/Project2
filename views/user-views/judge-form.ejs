@@ -5,38 +5,38 @@
   <ul class="error">
     <!-- we cant do a forEach loop because "validationErrors" is an object -->
     <% for (let field in validationErrors) { %>
-      <li> <%= validationErrors[field].message %> </li>
-    <% } %>
+      <li>
+        <%= validationErrors[field].message %>
+      </li>
+      <% } %>
   </ul>
-<% } %>
+  <% } %>
 
-<div class="box">
+    <div class="box">
 
-<form id="form" method="post" action="/judges">
-  <label for="judge-name-input"> Judge Name </label>
-  <input  id="judge-name-input" type="text" placeholder="e.g. Paul Jeske"
-      name="judgeName" />
-  <br />
-  <br />
+      <form id="form" method="post" action="/judges">
+        <label for="judge-name-input"> Judge Name </label>
+        <input id="judge-name-input" type="text" placeholder="e.g. Paul Jeske" name="judgeName" />
+        <br />
+        <br />
 
-  <label for="judge-circuit-input"> Judge's Circuit </label>
-  <input  id="judge-circuit-input" type="number" step="1"
-      placeholder="e.g. 13th" name="judgeCircuit" />
-  <br />
-  <br />
+        <label for="judge-circuit-input"> Judge's Circuit </label>
+        <input id="judge-circuit-input" type="number" step="1" placeholder="e.g. 13th" name="judgeCircuit" />
+        <br />
+        <br />
 
-  <label for="judge-image-input"> Image URL </label>
-  <input  id="judge-image-input" type="text"
-      placeholder="e.g. http://example.com/judge.jpg" name="judgeImage" />
-  <br />
-  <br />
+        <label for="judge-image-input"> Image URL </label>
+        <input id="judge-image-input" type="text" placeholder="e.g. http://example.com/judge.jpg" name="judgeImage" />
+        <br />
+        <br />
 
-  <label for="judge-description-input"> Judge Description </label>
-  <textarea id="judge-description-input" class="textarea" placeholder="e.g. Fair, Impartial, Unbiased"
-      name="judgeDescription"></textarea>
-  <br />
+        <label for="judge-description-input"> Judge Description </label>
+        <textarea id="judge-description-input" class="textarea" placeholder="e.g. Fair, Impartial, Unbiased" name="judgeDescription"></textarea>
+        <br />
 
-  <button> Save This Judge </button>
-</form>
+        <div class="button">
+          <button class="btn btn-primary btn-white"> Save This Judge  </button>
+        </div>
+      </form>
 
-</div>
+    </div>

@@ -10,7 +10,6 @@ form input[type=text], form textarea {
     background-size: .25em .25em;
     background-repeat: no-repeat;
     margin-bottom: 5px;
-    /*border-radius: 11px;*/
     padding: .75em 2em .85em 1em;
     width: 100%;
     outline: 0;

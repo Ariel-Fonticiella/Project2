@@ -1,6 +1,7 @@
 const express = require("express");
 
 const myUploader = require("../config/multer-setup");
+const UserModel = require("../models/user-model");
 
 
 const router = express.Router();
@@ -46,7 +47,7 @@ router.post("/settings",
 
     req.user.save()
       .then(() => {
-          res.redirect("/settings");
+          res.redirect("/profile");
       })
       .catch((err) => {
           next(err);

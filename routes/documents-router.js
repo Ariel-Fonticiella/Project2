@@ -19,12 +19,14 @@ router.get("/documents", (req, res, next) => {
 router.post("/documents",
                // "docPhoto" is the input tag's "name" attribute
                //      |
-myUploader.single("docPhoto"), (req, res, next) => {
+myUploader.single("docPhoto"),
+(req, res, next) => {
     // redirect to log in if there is no logged in user
     if (req.user === undefined) {
         res.redirect("/login");
         return;
     }
+
 
   const theDocument = new DocumentModel({
       name:         req.body.docName,

@@ -1,23 +1,29 @@
- <h2> Judge Details </h2>
+<h2> Judge Details </h2>
 
 <h3> <%= judgeDetails.name %> </h3>
 
-<p> Circuit: <%= judgeDetails.circuit %> </p>
+<p> Circuit:
+  <%= judgeDetails.circuit %>
+</p>
 
-<p> <%= judgeDetails.description %> </p>
+<p>
+  <%= judgeDetails.description %>
+</p>
 
 <img src="<%= judgeDetails.imageUrl %>" />
 
-<p> Added on <%= judgeDetails.dateAdded %> </p>
+<p> Added on
+  <%= judgeDetails.dateAdded %>
+</p>
 
 
-<a href="/judges/<%= judgeDetails._id %>/edit">
+<a class="btn btn-primary btn-white2" href="/judges/<%= judgeDetails._id %>/edit">
   Edit This Judge
 </a>
 
 <br />
 
-<a href="/judges/<%= judgeDetails._id %>/delete">
+<a class="btn btn-primary btn-white2" href="/judges/<%= judgeDetails._id %>/delete">
   Delete This Judge
 </a>
 
@@ -25,7 +31,7 @@
 
 <h3> Reviews </h3>
 
-<a href="/judges/<%= judgeDetails._id %>/reviews/new">
+<a class="btn btn-primary btn-white2" href="/judges/<%= judgeDetails._id %>/reviews/new">
   Write a Review
 </a>
 
@@ -33,8 +39,12 @@
   <% listOfReviews.forEach((oneReview) => { %>
     <li>
       <h4> <%= oneReview.stars %> out of 5</h4>
-      <p> <%= oneReview.content %> </p>
-      <p> by <%= oneReview.authorName %> </p>
+      <p>
+        <%= oneReview.content %>
+      </p>
+      <p> by
+        <%= oneReview.authorName %>
+      </p>
     </li>
-  <% }) %>
-</ul>
+    <% }) %>
+</ul>%>

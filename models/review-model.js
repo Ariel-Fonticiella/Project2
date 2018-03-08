@@ -1,30 +1,38 @@
 const mongoose = require("mongoose");
 
-
 const Schema = mongoose.Schema;
 
-
-// the schema defines the structure of documents in this collection
-const reviewSchema = new Schema({
-    // review belongs to a judge
-    // (this is the judges's id)
-    judge: {
-      type: Schema.Types.ObjectId,
-      required: [true, "Please specify the Judge for this review."]
+// new Schema({ schema }, { settings }) -- This is the basic structure:
+const userSchema = new Schema(
+  // 1st argument -> SCHEMA STRUCTURE
+  {
+    userName: {
+      type: String,
+      required: [true, "Give us your User Name."]
     },
-    // rating that the reviewer gives the Judge
-    stars: {
-      type: Number,
-      required: [true, "Please rate this product."],
-      min: [1, "Rating can't be less than 1."],
-      max: [5, "Rating can't be greater than 5."]
+
+    avatar: {
+      type: String,
+      default: "./images/default-avatar.gif"
     },
-});
 
-// the model has the methods to make database queries
-const ReviewModel = mongoose.model("Review", reviewSchema);
-             //                        |
-             // collection name is "reviews"
+    encryptedPassword: {
+      type: String,
+    },
 
+    // normal login users:
+    email: {
+      type: String,
+      match: [/.+@.+/, "Emails need an @ sign"]
+    }
+  },
+    // 2nd argument -> SETTINGS object
+  {
+    // automatically add "createdAt" and "updatedAt" Date fields
+    timestamps: true
+  }
+);
 
-module.exports = ReviewModel;
+const UserModel = mongoose.model("User", userSchema);
+
+module.exports = UserModel;

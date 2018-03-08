@@ -1,30 +1,35 @@
 <h2> Edit Your Profile </h2>
-<div class="flex-container profileWrap">
-<br />
-  <div class="lower">
+<div class="flex-container pro">
 
-    <p>
-      Your avatar:
+  <div class="form">
+    <form id="form" method="post" action="/settings" enctype="multipart/form-data">
+      <label for="user-name-input"> Change User Name </label>
+      <input id="user-name-input" type="text" placeholder="e.g. Justice" name="editUserName" value="<%= currentUser.userName %>" />
       <br />
       <br />
-      <img src="<%= currentUser.avatar %>" />
-    </p>
+
+      <label for="avatar-input"> Change Avatar </label>
+      <br />
+      <div class="change-container">
+        <div class="profileWrap">
+          <div class="flex-container info">
+            <p id="current">
+              Current avatar:
+            </p>
+            <img id="avatar" src="<%= currentUser.avatar %>" />
+            <div class="file">
+              <input id="avatar-input" type="file" name="editAvatar" />
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+      <!--Change-Container-->
+      <br />
+      <br />
+      <div class="button">
+        <button class="btn btn-primary btn-white"> Save Changes </button>
+      </div>
+    </form>
   </div>
-</div>
-
-<div class="form">
-                                                  <!-- for file uploads -->
-                                                            |
-<form id="form" method="post" action="/settings" enctype="multipart/form-data">
-  <label for="user-name-input"> User Name </label>
-  <input id="user-name-input" type="text" placeholder="e.g. Justice"
-    name="editUserName" value="<%= currentUser.userName %>" />
-  <br />
-
-  <label for="avatar-input"> Change Your Avatar </label>
-  <input id="avatar-input" type="file" name="editAvatar" />
-  <br />
-
-  <button> Save Changes </button>
-</form>
 </div>

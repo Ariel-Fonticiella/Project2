@@ -1,15 +1,17 @@
 <h2> Search Results </h2>
 
 <p>
-  You searched for <b> <%= searchTerm %> </b>.
-  We found <%= listOfResults.length %> results.
+  You searched for <b> <%= searchTerm %> </b>. We found
+  <%= listOfResults.length %> results.
 </p>
 
 <ul>
   <% listOfResults.forEach((oneJudge) => { %>
     <li>
       <h3> <%= oneJudge.name %> </h3>
-      <p> $<%= oneJudge.circuit%> </p>
+      <p> $
+        <%= oneJudge.circuit%>
+      </p>
       <img src="<%= oneJudge.imageUrl %>" />
       <br />
 
@@ -17,5 +19,5 @@
         View Judge Details
       </a>
     </li>
-  <% }) %>
+    <% }) %>
 </ul>
