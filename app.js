@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const layouts = require('express-ejs-layouts');
 const session = require("express-session");
-const passport = require("passport");
+const passport = require("passport"); 
 
 // Load environment variables from the ".env" file
 // (put this before the setup files since this defines env variables)
