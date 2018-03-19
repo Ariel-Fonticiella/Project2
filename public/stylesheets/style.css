@@ -1,10 +1,4 @@
 /* Global Classes */
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 
 * {
   box-sizing: border-box;
@@ -16,11 +10,8 @@ body {
   line-height: 1.4;
   color: #333;
   background-color: #F4F4F4;
-  /*width: 100%;*/
-  /*margin: 0 auto;*/
-  margin: 0;
-  padding: 0;
-  height: 100%
+  width: 100%;
+  margin: 0 auto;
 }
 
 a {
@@ -37,10 +28,6 @@ h2 {
   display: flex;
 }
 
-#wrapper1 {
-  min-height: 100%;
-  position: relative;
-}
 /*-----------Global End-----------*/
 
 .box {
@@ -320,13 +307,10 @@ h3.card-name{
 /* Footer */
 
 footer {
-  position: absolute;
+  position: relative;
   background-color: #292929;
   font-size: 12px;
   font-family: 'Titillium Web', sans-serif;
-  width: 100%;
-  left: 0px;
-  bottom: 0px;
 }
 
 
